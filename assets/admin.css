@@ -1,0 +1,162 @@
+/* WP Smart 404 — Admin Styles */
+
+.ws404-wrap { max-width: 1200px; }
+
+/* ── Summary cards ──────────────────────────────────────────────────────── */
+.ws404-cards {
+    display: flex;
+    gap: 16px;
+    margin: 16px 0 24px;
+    flex-wrap: wrap;
+}
+
+.ws404-card {
+    background: #fff;
+    border: 1px solid #dcdcde;
+    border-radius: 6px;
+    padding: 16px 24px;
+    min-width: 120px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ws404-card-warn  { border-top: 3px solid #f0b429; }
+.ws404-card-info  { border-top: 3px solid #2271b1; }
+.ws404-card-ok    { border-top: 3px solid #16a34a; }
+
+.ws404-card-num {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1d2327;
+    line-height: 1;
+}
+
+.ws404-card-label {
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+/* ── Actions bar ────────────────────────────────────────────────────────── */
+.ws404-actions-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+/* ── Table ──────────────────────────────────────────────────────────────── */
+.ws404-table { margin-top: 0; }
+
+.ws404-url {
+    font-size: 12px;
+    word-break: break-all;
+    background: #f6f7f7;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.ws404-ref {
+    font-size: 11px;
+    color: #999;
+    display: block;
+    margin-top: 3px;
+    word-break: break-all;
+}
+
+.ws404-hits {
+    display: inline-block;
+    background: #f0f0f0;
+    border-radius: 12px;
+    padding: 2px 10px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.ws404-hits-high {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+/* ── Suggestion cell ────────────────────────────────────────────────────── */
+.ws404-suggestion {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ws404-suggest-link {
+    font-size: 12px;
+    word-break: break-all;
+}
+
+.ws404-confidence {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    padding: 2px 7px;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.ws404-conf-high   { background: #dcfce7; color: #166534; }
+.ws404-conf-medium { background: #fef9c3; color: #854d0e; }
+.ws404-conf-low    { background: #fee2e2; color: #991b1b; }
+
+/* ── Badges ─────────────────────────────────────────────────────────────── */
+.ws404-badge {
+    display: inline-block;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+
+.ws404-badge-ok   { background: #dcfce7; color: #166534; font-weight: 600; }
+.ws404-badge-none { background: #f3f4f6; color: #6b7280; }
+
+/* ── Action buttons ─────────────────────────────────────────────────────── */
+.ws404-action-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.ws404-action-cell .button {
+    width: 100%;
+    text-align: center;
+}
+
+/* ── Empty state ────────────────────────────────────────────────────────── */
+.ws404-empty {
+    background: #fff;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    padding: 40px;
+    text-align: center;
+    color: #555;
+    font-size: 15px;
+}
+
+/* ── Row loading state ──────────────────────────────────────────────────── */
+.ws404-row.ws404-loading td {
+    opacity: .5;
+    pointer-events: none;
+}
+
+.ws404-spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ddd;
+    border-top-color: #2271b1;
+    border-radius: 50%;
+    animation: ws404-spin .7s linear infinite;
+    vertical-align: middle;
+    margin-right: 6px;
+}
+
+@keyframes ws404-spin { to { transform: rotate(360deg); } }
